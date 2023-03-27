@@ -1,0 +1,74 @@
+<div class="top-menu">
+
+    <img class="logo"
+         src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+
+</div>
+
+
+
+<!-- <div class="courses" *ngFor="let course of courses">
+
+    <course-card
+            [highlighted] = "false"
+            #highlighter = "hl"
+            (toggleHighlight)="onToggle($event)"
+            type="beginner"
+            (courseSelected)="onCourseSelected($event)"
+                 [course]="course">
+
+        <course-image [src]="course.iconUrl"></course-image>
+
+        <div class="course-description"
+           (dblClick)="highlighter.toggle()">
+            {{ course.longDescription }}
+        </div>
+
+    </course-card>
+
+
+</div> -->
+
+<!-- The above will becomes this when Angular execute -->
+
+
+<!-- <ng-template [ngIf]="courses[0]" let-course > -->
+  <ng-template ngFor let-course [ngForOf]="courses" >
+  <div class="courses">
+
+    <course-card
+            [highlighted] = "false"
+            #highlighter = "hl"
+            (toggleHighlight)="onToggle($event)"
+            type="beginner"
+            (courseSelected)="onCourseSelected($event)"
+                [course]="course">
+
+        <!-- <course-image [src]="course.iconUrl"
+                      *ngUnless="!course.iconUrl"
+                      >
+        </course-image> -->
+
+        <!-- The above will be convert to this -->
+        <!-- <ng-template [ngUnless]="!course.iconUrl">
+            <course-image [src]="course.iconUrl">
+            </course-image>
+        </ng-template> -->
+
+        <!-- Need to change above to use *ngUnless, otherwise it will not work -->
+        <course-image [src]="course.iconUrl"
+                      *ngxUnless="!course.iconUrl"
+                      >
+        </course-image>
+
+        <div class="course-description"
+          (dblClick)="highlighter.toggle()">
+            {{ course.longDescription }}
+        </div>
+
+    </course-card>
+
+  </div>
+</ng-template>
+
+
