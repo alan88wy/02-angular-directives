@@ -1,7 +1,9 @@
 
-##  Angular Core Deep Dive (Directives)
+##  02 Angular Directives 
 
-This repository contains the code of the [Angular Core Deep Dive]( directive) exercise
+This is part of the Udemy Angular Core Deep Dive course that talk about Angular Components, Core Directives and Pipes.
+
+This repository is created with NodeJS 18 and Angular 15.
 
 
 # Installation pre-requisites
@@ -19,9 +21,9 @@ With the following command the angular-cli will be installed globally in your ma
 
 We can install the master branch using the following commands:
 
-    git clone https://github.com/alan88wy/02-angular-directives.git
+    git clone https://github.com/alan88w/02-angular-directives.git
 
-This repository is made of several separate npm modules, that are installable separately. For example, to run the au-input module, we can do the following:
+Before running, you must install the required packages.
 
     cd 02-angular-directives
     npm install
