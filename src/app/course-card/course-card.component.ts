@@ -42,6 +42,9 @@ export class CourseCardComponent implements OnInit, AfterViewInit, AfterContentI
     }
 
     ngAfterViewInit() {
+        // A lifecycle hook that is called after Angular has fully initialized
+        // a component's view. Define an ngAfterViewInit() method to handle any
+        // additional initialization tasks.
 
     }
 
